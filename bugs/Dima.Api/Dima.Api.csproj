@@ -17,6 +17,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
     <PackageReference Include="Stripe.net" Version="46.2.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+	<None Include="Data\Scripts\seed.sql" CopyToOutputDirectory="Always" />
+	<None Include="Data\Views\*.sql" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
   <ItemGroup>

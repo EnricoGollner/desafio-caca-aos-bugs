@@ -49,11 +49,20 @@ Exemplo de `appsettings.json` (apenas exemplo — não deixe credenciais em cód
 }
 ```
 
-4. Criar o banco e executar a API (já deixarei um seed para o banco):
+4. Criar o banco e executar a API
+
+- Aplique as migrations para criar o banco. Você pode escolher executar SEM seed (v4) ou COM seed (v5_seed) — os comandos estão no trecho seguinte.
+- Os dados do seed são atribuídos ao usuário "teste@balta.io", então caso decida utilizá-los, basta criar o usuário com este e-mail.
 
 ```bash
 cd desafio-caca-aos-bugs/bugs/Dima.Api
-dotnet ef database update
+
+# Para aplicar as migrations, deixo 2 opções:
+# SEM SEED:
+dotnet ef database update v4
+# COM SEED:
+dotnet ef database update # Ou dotnet ef database update v5_seed
+
 dotnet run
 ```
 

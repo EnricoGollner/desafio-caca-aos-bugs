@@ -280,6 +280,12 @@ namespace Dima.Api.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.Sql(File.ReadAllText("Data/Views/vwGetExpensesByCategory.sql"));
+
+            migrationBuilder.Sql(File.ReadAllText("Data/Views/vwGetIncomesAndExpenses.sql"));
+
+            migrationBuilder.Sql(File.ReadAllText("Data/Views/vwGetIncomesByCategory.sql"));
+
             migrationBuilder.CreateIndex(
                 name: "IX_IdentityClaim_UserId",
                 table: "IdentityClaim",
@@ -378,6 +384,12 @@ namespace Dima.Api.Migrations
 
             migrationBuilder.DropTable(
                 name: "Voucher");
+
+            migrationBuilder.Sql("DROP VIEW IF EXISTS [vwGetExpensesByCategory]");
+
+            migrationBuilder.Sql("DROP VIEW IF EXISTS [vwGetIncomesAndExpenses]");
+
+            migrationBuilder.Sql("DROP VIEW IF EXISTS [vwGetIncomesByCategory]");
         }
     }
 }
