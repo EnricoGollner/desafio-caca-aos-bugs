@@ -139,5 +139,5 @@ VALUES ('Presente de Aniversário', '2024-05-22', '2024-05-22', 2, -150.00, (SEL
 INSERT INTO [Transaction] (Title, CreatedAt, PaidOrReceivedAt, Type, Amount, CategoryId, UserId)
 VALUES ('Bonificação', '2024-05-24', '2024-05-24', 1, 1200.00, (SELECT Id FROM [Category] WHERE Title='Investimentos'), 'teste@balta.io');
 
-INSERT INTO [Product] VALUES('Plano Mês', '1 mês de acesso a plataforma', 'plano-mes', 1, 89.90)
+INSERT INTO [Product] VALUES('Plano Mês', '1 mês de acesso a plataforma', 'plano-mensal', 1, 89.90)
 INSERT INTO [Product] VALUES('Plano Anual', '1 ano de acesso a plataforma', 'plano-anual', 1, 799.90)
